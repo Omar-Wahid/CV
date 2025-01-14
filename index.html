@@ -2,60 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>⨊Omar.s webpage☭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Wahid - Game Designer Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1d;
+            color: #ffffff;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #2a2a2e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #d3a4ff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #f39c12;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #d3a4ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project img {
+            max-width: 50%;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .project .description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+        }
+
+        .project img:hover + .overlay {
+            opacity: 1;
+        }
+
+        .art-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .art-gallery img {
+            max-width: 100px;
+            border-radius: 10px;
+        }
+
+        .youtube-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1d;
+        }
+
+        footer a {
+            color: #d3a4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #8a2be2;
+        }
+
+        .accent {
+            color: #ff6f61;
+        }
+
+    </style>
 </head>
-    <body>
-      <table cellspacing="20">
-          <tr>
-              <td><img src="https://media.licdn.com/dms/image/C4D03AQHNe6Kn9cVNHA/profile-displayphoto-shrink_800_800/0/1662719018808?e=1681948800&v=beta&t=VAqkGi4YCX_Bs1JFnaPoaB36ihVy7wKD_dzRA-R2Lnc" alt="image profile"></td>
-              <td>
-                  <h1>Omar Wahid</h1>
-                  <p><em><strong>Game designer/Python developer/<a href="https://www.youtube.com/@projectgamedoser">Youtuber</a></strong></em></p>
-                  <p>This website contains a demonstration of my body of work over the years, a few links to the games I made and the applications I built</p>
-              </td>
-          </tr>
+<body>
+    <div class="container">
+        <header>
+            <img src="MyProfile.jpg" alt="Omar Wahid">
+            <h1>Omar Wahid</h1>
+            <p>A technical game designer, Level designer, web developer, programmer, automotive engineer, 3D/2D artist, and YouTuber.</p>
+        </header>
 
-      </table>
-        <hr size="3" noshade>
-        <h3>List of games</h3>
-        <ul>
-            <li>Space is hard <a href="https://play.google.com/store/apps/details?id=com.OmarWaheed.game">On android</a></li>
-            <li>Earth defense cannon <a href="https://omar-waheed.itch.io/edf">Play now in browser</a></li>
-            <li>The root of all evil <a href="https://omar-waheed.itch.io/the-root-of-all-evil">Play now in browser</a></li>
-        </ul>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Omar Wahid, a passionate technical game designer with extensive experience in AAA titles and indie projects. Leveraging my engineering background, I bring a unique perspective to gameplay mechanics, balance, and user experience. Let's create immersive experiences together.</p>
+        </section>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Game title</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                 <tr>
-                    <td>Space is hard</td>
-                    <td>Solo developed, narrative space combat, with GameMaker engine, and using DnD scripting language</td>
-                </tr>
-                <tr>
-                    <td>Earth defence cannon</td>
-                    <td>Solo developed, arcade shooter, with GDevelop game engine, for GDevelop game jam</td>
-                </tr>
-                <tr>
-                    <td>The root of all evil</td>
-                    <td>Solo developed, clicker, with GDevelop game engine, for GGJ 2023</td>
-                </tr>
-            </tbody>
-            <tfoot>
+        <section id="work">
+            <h2>Work with World of Tanks</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="WoTSwing.gif" alt="World of Tanks gameplay">
+                    <div class="description">
+                        <p>Developed gameplay dynamics and vehicle physics, balancing over 600+ tank permutations for enhanced user experience.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WoTHP.gif" alt="World of Tanks UI updates">
+                    <div class="description">
+                        <p>Improved user interface through prototyping, with animated representaion of damage in the Health bar, showing the damage in a more engaging way.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WotCameraAnimation.gif" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>Built rapid prototypes and deployed multiple iterations weekly to improve gameplay experience. In this example I created a camera movement system that allows player to see behind them when moving back, while smoothing the camera animation and not impact the balance of shooting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </tfoot>
+        <section id="indie">
+            <h2>Indie Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="SpaceIsHard.gif" alt="Space is Hard gameplay">
+                    <div class="description">
+                        <p>Turn-based strategy game for Android and PC, focusing on challenging mechanics and strategy.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="SpaceIsHardReview.png" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>The demo was highly praised by players, reaching a score of 4.9 on GooglePlay.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="EarthDefence.gif" alt="Earth Defense gameplay">
+                    <div class="description">
+                        <p>"Earth defence cannon" Fast-paced arcade shooter available for browsers, combining classic mechanics with pixel art style.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Root of all Evil.gif" alt="Earth Defense dynamics">
+                    <div class="description">
+                        <p>"The root of all evil" is a game about money and the idea of exponential growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </table>
+        <section id="youtube">
+            <h2>YouTube Career</h2>
+            <p>As projct <span class="highlight">"GameDoser"</span>, I have gained over 68,000 subscribers and 10 years of content creation experience, including dev-log series "The Game Professor." My channel features game reviews, development insights, and gameplay analysis.</p>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/YcmM6CgQEq4?si=NRqopzcjaY9FhsuN" allowfullscreen></iframe>
+        </section>
 
-        <hr size="3" noshade>
-        <a href="Hobbies.html">My hobbies</a>
-        <br>
-        <h3>My contacts</h3><br>
-        <a href="https://www.linkedin.com/in/omar-wahid-57710b100/">My Linkedin</a><br>
-        <a href="https://github.com/Omar-Wahid">My GitHub</a>
-    </body>
+        <section id="passion-projects">
+            <h2>Passion Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="ShooterCPP.gif" alt="Passion Project gameplay">
+                    <div class="description">
+                        <p>Built in Unreal Engine, with C++, a 3D third person shooter with realisitc visuals and futurisitc setting, I built this right after learning C++ which I did only in a total of 9 days.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="LevelHL.gif" alt="Passion Project dynamics">
+                    <div class="description">
+                        <p>I passionatly build levels for the games I love, and Half Life 2 provided me with the best -although a little outdated- tools to build levels that is fun and interesting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="art-gallery">
+            <h2>2D and 3D Art</h2>
+            <div class="art-gallery">
+                <img src="3d1.jpg" alt="Art example 1">
+                <img src="3d2.jpg" alt="Art example 2">
+                <img src="3d3.jpg" alt="Art example 3">
+                <img src="3d4.jpg" alt="Art example 4">
+                <!-- <img src="art5.png" alt="Art example 5">
+                <img src="art6.png" alt="Art example 6"> -->
+            </div>
+        </section>
+
+        <footer>
+            <p>Connect with me: <a href="mailto:omar.imeche@gmail.com">omar.imeche@gmail.com</a> | <a href="https://github.com/Omar-Wahid" target="_blank">GitHub</a> | <a href="https://www.youtube.com/projectgamedoser" target="_blank">YouTube</a></p>
+        </footer>
+    </div>
+</body>
 </html>
