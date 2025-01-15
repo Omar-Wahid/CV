@@ -115,13 +115,15 @@
         .art-gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            flex-direction: column; /* Stack images vertically */
+            gap: 20px; /* Add spacing between images */
             justify-content: center;
         }
 
         .art-gallery img {
-            max-width: 100px;
             border-radius: 10px;
+            max-width: 100%; /* Make images take the full width of the screen */
+            width: 100%;
         }
 
         .youtube-video {
@@ -172,11 +174,24 @@
 
         <section id="work">
             <h2>Work with World of Tanks</h2>
+
             <div class="projects">
+                <div class="project">
+                    <img src="PrettyWOT.webp" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>World of tanks is the leading world defacto tank combat simulator, Wargaming - the developing company - is billion dollar company.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WotGPlay.png" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>100 Million total downloads only on GooglePlay, and it's not even the main revenue stream for the franchise of World of tanks.</p>
+                    </div>
+                </div>
                 <div class="project">
                     <img src="WoTSwing.gif" alt="World of Tanks gameplay">
                     <div class="description">
-                        <p>Developed gameplay dynamics and vehicle physics, balancing over 600+ tank permutations for enhanced user experience.</p>
+                        <p>My role was to develope gameplay dynamics and vehicle physics, balancing over 600+ tank permutations.</p>
                     </div>
                 </div>
                 <div class="project">
@@ -200,7 +215,7 @@
                 <div class="project">
                     <img src="SpaceIsHard.gif" alt="Space is Hard gameplay">
                     <div class="description">
-                        <p>"Space is Hard" is Turn-based space RPG game for Android and PC, focusing on story and atmosphere.</p>
+                        <p>"Space is Hard" is Turn-based space RPG game for Android and PC, focusing on story and atmosphere. the game was solo developed</p>
                     </div>
                 </div>
                 <div class="project">
@@ -210,15 +225,33 @@
                     </div>
                 </div>
                 <div class="project">
+                    <img src="Cemetary.gif" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>"Cemetary for the invaders" is a game about resisting colonial powers. Showing the devistation that fell upon the people under fascism.</p>
+                    </div>
+                </div>
+                  <div class="project">
+                    <img src="Cemetary2.gif" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>Lead the libyan resistance against the italian fascists. the game was made completely remotely with a small team of devs and artists, with a unique unexplored theme, the Arabian desert.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="kOJIMAbOYS.gif" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>As part of the "GameMakerToolkit" game jam, a team of 6 devs built this game, with the theme of "Randomness".</p>
+                    </div>
+                </div>
+                <div class="project">
                     <img src="EarthDefence.gif" alt="Earth Defense gameplay">
                     <div class="description">
-                        <p>"Earth defence cannon" Fast-paced arcade shooter available for browsers, combining classic mechanics with pixel art style.</p>
+                        <p>"Earth defence cannon" Fast-paced arcade shooter available for browsers, combining classic mechanics with pixel art style. the game was solo developed.</p>
                     </div>
                 </div>
                 <div class="project">
                     <img src="Root of all Evil.gif" alt="Earth Defense dynamics">
                     <div class="description">
-                        <p>"The root of all evil" is a game about money and the idea of exponential growth.</p>
+                        <p>"The root of all evil" is a game about money and the idea of exponential growth. the game was solo developed.</p>
                     </div>
                 </div>
             </div>
@@ -231,7 +264,7 @@
         </section>
 
         <section id="passion-projects">
-            <h2>Passion Projects</h2>
+            <h2>Pet projects</h2>
             <div class="projects">
                 <div class="project">
                     <img src="ShooterCPP.gif" alt="Passion Project gameplay">
@@ -242,7 +275,7 @@
                 <div class="project">
                     <img src="LevelHL.gif" alt="Passion Project dynamics">
                     <div class="description">
-                        <p>I passionatly build levels for the games I love, and Half Life 2 provided me with the best -although a little outdated- tools to build levels that is fun and interesting.</p>
+                        <p>I passionatly build levels for the games I love, and Half Life 2 provided me with the best - although a little outdated - tools to build levels that is fun and interesting.</p>
                     </div>
                 </div>
             </div>
@@ -251,6 +284,7 @@
         <section id="art-gallery">
             <h2>2D and 3D Art</h2>
             <div class="art-gallery">
+                <p>With capabilities in Photoshop, Corel draw and Blender3D, plus knowledge in video editing and animation, I create neccessary art for my prototypes.</p>
                 <img src="3d1.jpg" alt="Art example 1">
                 <img src="3d2.jpg" alt="Art example 2">
                 <img src="3d3.jpg" alt="Art example 3">
