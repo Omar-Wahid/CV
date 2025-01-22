@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Wahid - Game Designer Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            line-height: 1.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: #1E1E1E;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #BB86FC;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #03DAC6;
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #BB86FC;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project img {
+            max-width: 50%;
+            border-radius: 10px;
+        }
+
+        .project .description {
+            flex: 1;
+        }
+
+        .expandable {
+            cursor: pointer;
+            background-color: #444;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #BB86FC;
+        }
+
+        .expandable-content {
+            display: none;
+            margin-top: 10px;
+            color: #CCCCCC;
+        }
+
+        .art-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .art-gallery img {
+            border-radius: 10px;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .youtube-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1A1A1A;
+        }
+
+        footer a {
+            color: #BB86FC;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #FF6F61;
+        }
+
+        .accent {
+            color: #FF6F61;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.expandable').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="MyProfile.jpg" alt="Omar Wahid">
+            <h1>Omar Wahid</h1>
+            <p>A technical game designer, Level designer, web developer, programmer, automotive engineer, 3D/2D artist, and YouTuber.</p>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Omar Wahid, a passionate technical game designer with extensive experience in AAA titles and indie projects. Leveraging my engineering background, I bring a unique perspective to gameplay mechanics, balance, and user experience. Let's create immersive experiences together.</p>
+            <div class="expandable">Read more</div>
+            <div class="expandable-content">
+                <p>Beyond game design, I am a lifelong learner who enjoys exploring new technologies and artistic mediums, continuously pushing the boundaries of creativity.</p>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Work with World of Tanks</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="PrettyWOT.webp" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>World of tanks is the leading world defacto tank combat simulator, Wargaming - the developing company - is billion dollar company.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WotGPlay.png" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>100 Million total downloads only on GooglePlay, and it's not even the main revenue stream for the franchise of World of tanks.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WoTSwing.gif" alt="World of Tanks gameplay">
+                    <div class="description">
+                        <p>My role was to develope gameplay dynamics and vehicle physics, balancing over 600+ tank permutations.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WoTHP.gif" alt="World of Tanks UI updates">
+                    <div class="description">
+                        <p>Improved user interface through prototyping, with animated representation of damage in the Health bar, showing the damage in a more engaging way.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="WotCameraAnimation.gif" alt="World of Tanks prototyping">
+                    <div class="description">
+                        <p>Built rapid prototypes and deployed multiple iterations weekly to improve gameplay experience. In this example I created a camera movement system that allows player to see behind them when moving back, while smoothing the camera animation and not impact the balance of shooting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandable">See more details</div>
+            <div class="expandable-content">
+                <p>During my time with World of Tanks, I contributed to various groundbreaking features and collaborated closely with an international team.</p>
+            </div>
+        </section>
+
+        <section id="indie">
+            <h2>Indie Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="SpaceIsHard.gif" alt="Space is Hard gameplay">
+                    <div class="description">
+                        <p>"Space is Hard" is Turn-based space RPG game for Android and PC, focusing on story and atmosphere. the game was solo developed</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="SpaceIsHardReview.png" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>The demo was highly praised by players, reaching a score of 4.9 on GooglePlay.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Cemetary.gif" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>"Cemetary for the invaders" is a game about resisting colonial powers. Showing the devistation that fell upon the people under fascism.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Cemetary2.gif" alt="Space is Hard challenges">
+                    <div class="description">
+                        <p>Lead the Libyan resistance against the Italian fascists. the game was made completely remotely with a small team of devs and artists, with a unique unexplored theme, the Arabian desert.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="kOJIMAbOYS.gif" alt="GameMaker Toolkit Game Jam">
+                    <div class="description">
+                        <p>As part of the "GameMakerToolkit" game jam, a team of 6 devs built this game, with the theme of "Randomness".</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="EarthDefence.gif" alt="Earth Defense gameplay">
+                    <div class="description">
+                        <p>"Earth defence cannon" Fast-paced arcade shooter available for browsers, combining classic mechanics with pixel art style. the game was solo developed.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Root of all Evil.gif" alt="Root of all Evil">
+                    <div class="description">
+                        <p>"The root of all evil" is a game about money and the idea of exponential growth. the game was solo developed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandable">Explore more projects</div>
+            <div class="expandable-content">
+                <p>Each indie project provided unique challenges, enhancing my skills in narrative design and rapid prototyping.</p>
+            </div>
+        </section>
+
+        <section id="youtube">
+            <h2>YouTube Career</h2>
+            <p>As projct <span class="highlight">"GameDoser"</span>, I have gained over 68,000 subscribers and 10 years of content creation experience, including dev-log series "The Game Professor." My channel features game reviews, development insights, and gameplay analysis.</p>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/YcmM6CgQEq4" allowfullscreen></iframe>
+            <div class="expandable">More about my YouTube career</div>
+            <div class="expandable-content">
+                <p>Over the years, I have built a thriving community of like-minded individuals passionate about games and creativity.</p>
+            </div>
+        </section>
+
+        <section id="passion-projects">
+            <h2>Pet projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="ShooterCPP.gif" alt="Passion Project gameplay">
+                    <div class="description">
+                        <p>Built in Unreal Engine, with C++, a 3D third person shooter with realisitc visuals and futuristic setting, I built this right after learning C++ which I did only in a total of 9 days.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="LevelHL.gif" alt="Passion Project dynamics">
+                    <div class="description">
+                        <p>I passionately build levels for the games I love, and Half Life 2 provided me with the best - although a little outdated - tools to build levels that is fun and interesting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="art-gallery">
+            <h2>2D and 3D Art</h2>
+            <div class="art-gallery">
+                <p>With capabilities in Photoshop, Corel draw and Blender3D, plus knowledge in video editing and animation, I create necessary art for my prototypes.</p>
+                <img src="3d1.jpg" alt="Art example 1">
+                <img src="3d2.jpg" alt="Art example 2">
+                <img src="3d3.jpg" alt="Art example 3">
+                <img src="3d4.jpg" alt="Art example 4">
+            </div>
+        </section>
+
+        <footer>
+            <p>Connect with me: <a href="mailto:omar.imeche@gmail.com">omar.imeche@gmail.com</a> | <a href="https://github.com/Omar-Wahid" target="_blank">GitHub</a> | <a href="https://www.youtube.com/projectgamedoser" target="_blank">YouTube</a></p>
+        </footer>
+    </div>
+</body>
+</html>
